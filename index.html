@@ -217,6 +217,14 @@
             margin-top: 8px;
             text-align: center;
         }
+        .debug-info {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
@@ -254,23 +262,32 @@
                 <div class="date">Published May 5, 2025 · Updated 11:24 AM ET</div>
             </div>
 
+<!-- Debug Info -->
+<div class="debug-info">
+    <strong>Debug Info:</strong><br>
+    Video URL: https://vvrl.cc/mhq7il<br>
+    Image 1 URL: https://vvrl.cc/m23p5o<br>
+    Image 2 URL: https://vvrl.cc/mdz3o0<br>
+    <span id="image-status">Checking image status...</span>
+</div>
+
 <!-- Embedded Evidence Videos Section -->
 <div class="section-heading">Media Evidence</div>
 <div class="content">
     <p>The following media files have been released as part of the ongoing investigation and are considered official evidence in the case.</p>
     <div class="video-container">
-        <video width="100%" height="auto" controls preload="metadata">
+        <video width="100%" height="auto" controls preload="metadata" onerror="handleVideoError(this)">
             <source src="https://vvrl.cc/mhq7il" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="video-caption">Video Evidence - Submitted by witness</div>
     </div>
     <div class="video-container">
-        <img src="https://vvrl.cc/m23p5o" alt="Evidence Image 1" style="width:100%;height:auto;" />
+        <img src="https://vvrl.cc/m23p5o" alt="Evidence Image 1" style="width:100%;height:auto;" onerror="handleImageError(this)" onload="handleImageLoad(this)" />
         <div class="video-caption">Photo Evidence #1 - Submitted by investigator</div>
     </div>
     <div class="video-container">
-        <img src="https://vvrl.cc/mdz3o0" alt="Evidence Image 2" style="width:100%;height:auto;" />
+        <img src="https://vvrl.cc/mdz3o0" alt="Evidence Image 2" style="width:100%;height:auto;" onerror="handleImageError(this)" onload="handleImageLoad(this)" />
         <div class="video-caption">Photo Evidence #2 - Submitted by investigator</div>
     </div>
 </div>
@@ -297,7 +314,7 @@
 
             <!-- Image with overlay under the article -->
             <div class="image-overlay-container">
-                <img src="https://vvrl.cc/mhq7il" alt="Springfield High School building with police vehicles parked outside" class="featured-image" />
+                <img src="https://vvrl.cc/mhq7il" alt="Springfield High School building with police vehicles parked outside" class="featured-image" onerror="handleImageError(this)" onload="handleImageLoad(this)" />
                 <div class="image-overlay-text">
                     FBI RELEASED PHOTO OF THE OFFENDANT IN THE LAWSUIT FILE
                 </div>
@@ -322,16 +339,58 @@
 </div>
 
 <script>
-    // Add event listeners to handle video errors
+    // Debug functions to track image loading
+    function handleImageError(img) {
+        console.error('Image failed to load:', img.src);
+        img.style.border = '2px solid red';
+        img.alt = 'Image failed to load: ' + img.src;
+        updateDebugInfo('Image failed to load: ' + img.src);
+    }
+    
+    function handleImageLoad(img) {
+        console.log('Image loaded successfully:', img.src);
+        img.style.border = '2px solid green';
+        updateDebugInfo('Image loaded: ' + img.src);
+    }
+    
+    function handleVideoError(video) {
+        console.error('Video failed to load:', video.querySelector('source').src);
+        const videoContainer = video.parentElement;
+        if (videoContainer) {
+            videoContainer.innerHTML = '<div style="padding: 20px; background-color: #f3f3f3; border: 1px solid #ddd; text-align: center;"><p>Video loading error: ' + video.querySelector('source').src + '</p></div>';
+        }
+        updateDebugInfo('Video failed to load: ' + video.querySelector('source').src);
+    }
+    
+    function updateDebugInfo(message) {
+        const statusElement = document.getElementById('image-status');
+        if (statusElement) {
+            statusElement.innerHTML += '<br>' + message;
+        }
+    }
+    
+    // Test image URLs on page load
     document.addEventListener('DOMContentLoaded', function() {
-        const videos = document.querySelectorAll('video');
-        videos.forEach(video => {
-            video.addEventListener('error', function(e) {
-                const videoContainer = this.parentElement;
-                if (videoContainer) {
-                    videoContainer.innerHTML = '<div style="padding: 20px; background-color: #f3f3f3; border: 1px solid #ddd; text-align: center;"><p>Video loading error. Please try refreshing the page or check your internet connection.</p></div>';
-                }
-            }, true);
+        console.log('Testing image URLs...');
+        
+        // Test each URL
+        const urls = [
+            'https://vvrl.cc/mhq7il',
+            'https://vvrl.cc/m23p5o', 
+            'https://vvrl.cc/mdz3o0'
+        ];
+        
+        urls.forEach(url => {
+            const img = new Image();
+            img.onload = function() {
+                console.log('URL accessible:', url);
+                updateDebugInfo('URL accessible: ' + url);
+            };
+            img.onerror = function() {
+                console.error('URL not accessible:', url);
+                updateDebugInfo('URL not accessible: ' + url);
+            };
+            img.src = url;
         });
     });
 </script>
