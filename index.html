@@ -1,398 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOCAL COMMUNITY OUTRAGED AS TEEN HARASSMENT INCIDENT COMES TO LIGHT | FOX NEWS</title>
-    <style>
-        /* FOX News Style CSS */
-        body {
-            font-family: "Roboto", Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #222;
-        }
-        .page-wrapper {
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .top-bar {
-            background-color: #003366;
-            height: 5px;
-            width: 100%;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            border-bottom: 2px solid #f3f3f3;
-            background-color: #fff;
-        }
-        .logo {
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            color: #fff;
-            font-weight: 800;
-            font-size: 28px;
-            background-color: #cc0000;
-            padding: 5px 10px;
-            letter-spacing: -1px;
-        }
-        .nav-section {
-            display: flex;
-            background-color: #f3f3f3;
-            padding: 10px 20px;
-            font-size: 14px;
-            font-weight: 600;
-            color: #666;
-        }
-        .nav-item {
-            margin-right: 15px;
-            text-transform: uppercase;
-        }
-        .article-container {
-            padding: 20px;
-        }
-        .category-tag {
-            color: #cc0000;
-            font-weight: 700;
-            font-size: 14px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            display: block;
-        }
-        h1 {
-            font-size: 32px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin: 10px 0 15px;
-            color: #121212;
-        }
-        .article-meta {
-            display: flex;
-            border-bottom: 1px solid #ebebeb;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-        }
-        .byline {
-            font-size: 14px;
-            color: #666;
-            margin-right: 20px;
-        }
-        .date {
-            font-size: 14px;
-            color: #999;
-        }
-        .featured-image {
-            width: 100%;
-            margin-bottom: 20px;
-            border: 1px solid #ebebeb;
-        }
-        .content {
-            font-size: 16px;
-            line-height: 1.7;
-        }
-        .content p {
-            margin-bottom: 20px;
-        }
-        .quote {
-            border-left: 4px solid #cc0000;
-            padding: 10px 20px;
-            margin: 25px 0;
-            background-color: #f9f9f9;
-            font-style: italic;
-            font-size: 18px;
-            line-height: 1.5;
-            color: #333;
-        }
-        .quote-attribution {
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            display: block;
-            margin-top: 10px;
-            color: #666;
-        }
-        .section-heading {
-            font-size: 22px;
-            font-weight: 700;
-            margin: 30px 0 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #f3f3f3;
-        }
-        .related-stories {
-            background-color: #f9f9f9;
-            padding: 20px;
-            margin: 30px 0;
-        }
-        .related-stories h3 {
-            margin-top: 0;
-            font-size: 20px;
-            border-bottom: 2px solid #cc0000;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-        }
-        .footer {
-            background-color: #f3f3f3;
-            border-top: 3px solid #cc0000;
-            margin-top: 40px;
-            padding: 20px;
-            font-size: 14px;
-            color: #666;
-        }
-        .breaking-news-banner {
-            background-color: #cc0000;
-            color: white;
-            font-weight: bold;
-            padding: 8px 15px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
-        .breaking-label {
-            background-color: white;
-            color: #cc0000;
-            padding: 3px 8px;
-            margin-right: 10px;
-            font-size: 12px;
-            font-weight: 800;
-            text-transform: uppercase;
-        }
-        .social-icons {
-            display: flex;
-            justify-content: flex-end;
-            margin: 15px 0;
-        }
-        .social-icon {
-            width: 30px;
-            height: 30px;
-            background-color: #f3f3f3;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 10px;
-            color: #666;
-            font-weight: bold;
-        }
-        .image-overlay-container {
-            position: relative;
-            display: inline-block;
-            width: 100%;
-        }
-        .image-overlay-container .featured-image {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-        .image-overlay-text {
-            position: absolute;
-            bottom: 20px;
-            left: 0;
-            width: 100%;
-            color: #fff;
-            background: rgba(204,0,0,0.85);
-            padding: 12px 20px;
-            font-size: 1.2em;
-            font-weight: bold;
-            text-shadow: 1px 1px 4px #000;
-            box-sizing: border-box;
-        }
-        .video-container {
-            width: 100%;
-            margin-bottom: 30px;
-        }
-        video {
-            max-width: 100%;
-            display: block;
-            margin: 0 auto;
-        }
-        .video-caption {
-            font-size: 14px;
-            color: #666;
-            font-style: italic;
-            margin-top: 8px;
-            text-align: center;
-        }
-        .debug-info {
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 10px 0;
-            font-family: monospace;
-            font-size: 12px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LOCAL COMMUNITY OUTRAGED AS TEEN HARASSMENT INCIDENT COMES TO LIGHT | FOX NEWS</title>
+  <style>
+    body {
+      font-family: "Roboto", Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #222;
+    }
+    .page-wrapper {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .top-bar {
+      background-color: #003366;
+      height: 5px;
+      width: 100%;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      border-bottom: 2px solid #f3f3f3;
+      background-color: #fff;
+    }
+    .logo {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: #fff;
+      font-weight: 800;
+      font-size: 28px;
+      background-color: #cc0000;
+      padding: 5px 10px;
+      letter-spacing: -1px;
+    }
+    .nav-section {
+      display: flex;
+      background-color: #f3f3f3;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #666;
+    }
+    .nav-item {
+      margin-right: 15px;
+      text-transform: uppercase;
+    }
+    .article-container {
+      padding: 20px;
+    }
+    .category-tag {
+      color: #cc0000;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: block;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 10px 0 15px;
+      color: #121212;
+    }
+    .article-meta {
+      display: flex;
+      border-bottom: 1px solid #ebebeb;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+    }
+    .byline {
+      font-size: 14px;
+      color: #666;
+      margin-right: 20px;
+    }
+    .date {
+      font-size: 14px;
+      color: #999;
+    }
+    .content {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .content p {
+      margin-bottom: 20px;
+    }
+    .quote {
+      border-left: 4px solid #cc0000;
+      padding: 10px 20px;
+      margin: 25px 0;
+      background-color: #f9f9f9;
+      font-style: italic;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #333;
+    }
+    .quote-attribution {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      display: block;
+      margin-top: 10px;
+      color: #666;
+    }
+    .section-heading {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 30px 0 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f3f3f3;
+    }
+    .related-stories {
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin: 30px 0;
+    }
+    .related-stories h3 {
+      margin-top: 0;
+      font-size: 20px;
+      border-bottom: 2px solid #cc0000;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+    .footer {
+      background-color: #f3f3f3;
+      border-top: 3px solid #cc0000;
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+    .breaking-news-banner {
+      background-color: #cc0000;
+      color: white;
+      font-weight: bold;
+      padding: 8px 15px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+    .breaking-label {
+      background-color: white;
+      color: #cc0000;
+      padding: 3px 8px;
+      margin-right: 10px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: flex-end;
+      margin: 15px 0;
+    }
+    .social-icon {
+      width: 30px;
+      height: 30px;
+      background-color: #f3f3f3;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10px;
+      color: #666;
+      font-weight: bold;
+    }
+    .video-container {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .video-caption {
+      font-size: 14px;
+      color: #666;
+      font-style: italic;
+      margin-top: 8px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <div class="page-wrapper">
-        <div class="top-bar"></div>
-        <div class="header">
-            <div class="logo">FOX NEWS</div>
-            <div class="social-icons">
-                <div class="social-icon">f</div>
-                <div class="social-icon">t</div>
-                <div class="social-icon">in</div>
-                <div class="social-icon">@</div>
-            </div>
-        </div>
+  <div class="page-wrapper">
+    <div class="top-bar"></div>
+    <div class="header">
+      <div class="logo">FOX NEWS</div>
+      <div class="social-icons">
+        <div class="social-icon">f</div>
+        <div class="social-icon">t</div>
+        <div class="social-icon">in</div>
+        <div class="social-icon">@</div>
+      </div>
+    </div>
 
-        <div class="nav-section">
-            <div class="nav-item">U.S.</div>
-            <div class="nav-item">Politics</div>
-            <div class="nav-item">Crime</div>
-            <div class="nav-item">Education</div>
-            <div class="nav-item">Opinion</div>
-        </div>
+    <div class="nav-section">
+      <div class="nav-item">U.S.</div>
+      <div class="nav-item">Politics</div>
+      <div class="nav-item">Crime</div>
+      <div class="nav-item">Education</div>
+      <div class="nav-item">Opinion</div>
+    </div>
 
-        <div class="article-container">
-            <div class="breaking-news-banner">
-                <span class="breaking-label">Breaking</span>
-                <span>FBI Issues Arrest Warrant in Teen Harassment Case</span>
-            </div>
+    <div class="article-container">
+      <div class="breaking-news-banner">
+        <span class="breaking-label">Breaking</span>
+        <span>FBI Issues Arrest Warrant in Teen Harassment Case</span>
+      </div>
 
-            <span class="category-tag">U.S.</span>
-            <h1>LOCAL COMMUNITY OUTRAGED AS TEEN HARASSMENT INCIDENT COMES TO LIGHT</h1>
-            
-            <div class="article-meta">
-                <div class="byline">By News Staff | FOX NEWS</div>
-                <div class="date">Published May 5, 2025 · Updated 11:24 AM ET</div>
-            </div>
+      <span class="category-tag">U.S.</span>
+      <h1>LOCAL COMMUNITY OUTRAGED AS TEEN HARASSMENT INCIDENT COMES TO LIGHT</h1>
 
-<!-- Debug Info -->
-<div class="debug-info">
-    <strong>Debug Info:</strong><br>
-    Video URL: https://vvrl.cc/mhq7il<br>
-    Image 1 URL: https://vvrl.cc/m23p5o<br>
-    Image 2 URL: https://vvrl.cc/mdz3o0<br>
-    <span id="image-status">Checking image status...</span>
-</div>
+      <div class="article-meta">
+        <div class="byline">By News Staff | FOX NEWS</div>
+        <div class="date">Published May 5, 2025 · Updated 11:24 AM ET</div>
+      </div>
 
-<!-- Embedded Evidence Videos Section -->
-<div class="section-heading">Media Evidence</div>
-<div class="content">
-    <p>The following media files have been released as part of the ongoing investigation and are considered official evidence in the case.</p>
-    <div class="video-container">
-        <video width="100%" height="auto" controls preload="metadata" onerror="handleVideoError(this)">
-            <source src="https://vvrl.cc/mhq7il" type="video/mp4">
+      <div class="section-heading">Media Evidence</div>
+      <div class="content">
+        <p>The following media file has been released as part of the ongoing investigation and is considered official evidence in the case.</p>
+
+        <div class="video-container">
+          <video width="100%" height="400" controls>
+            <source src="https://video-link-generator.replit.app/api/videos/file/1753597891196-332608062.mp4" type="video/mp4">
             Your browser does not support the video tag.
-        </video>
-        <div class="video-caption">Video Evidence - Submitted by witness</div>
-    </div>
-    <div class="video-container">
-        <img src="https://vvrl.cc/m23p5o" alt="Evidence Image 1" style="width:100%;height:auto;" onerror="handleImageError(this)" onload="handleImageLoad(this)" />
-        <div class="video-caption">Photo Evidence #1 - Submitted by investigator</div>
-    </div>
-    <div class="video-container">
-        <img src="https://vvrl.cc/mdz3o0" alt="Evidence Image 2" style="width:100%;height:auto;" onerror="handleImageError(this)" onload="handleImageLoad(this)" />
-        <div class="video-caption">Photo Evidence #2 - Submitted by investigator</div>
-    </div>
-</div>
+          </video>
+          <div class="video-caption">Official Evidence Video - Released by authorities</div>
+        </div>
+      </div>
 
-            
-            <div class="content">
-                <p>A local community is demanding answers after allegations surfaced that a 16-year-old female student was subjected to persistent harassment at Springfield High School, prompting an FBI investigation and federal lawsuit. The incident has sparked heated debate about school safety protocols and administrative accountability.</p>
-                <p>According to sources close to the family, the harassment allegedly continued for several weeks before school officials took action. The teenager's parents claim their daughter reported multiple incidents to teachers, but meaningful intervention was delayed. On April 28, 2025, the parents filed a formal complaint with the Federal Bureau of Investigation, which has now launched a full investigation into the case.</p>
-                <div class="quote">
-                    "No child should have to endure this kind of treatment in an environment meant for learning. We are deeply concerned about the apparent lack of immediate response from those entrusted with student safety."
-                    <span class="quote-attribution">— Rebecca Jordan, Family Attorney</span>
-                </div>
+      <div class="content">
+        <p>A local community is demanding answers after allegations surfaced...</p>
+      </div>
 
-                <p>School officials have declined to comment on specifics, citing student privacy concerns, but Superintendent Thomas Wilson issued a statement saying, "We take all reports of harassment extremely seriously and are conducting a thorough investigation into these allegations."</p>
-                <p>The Springfield School Board has called an emergency meeting for later this week to review the district's harassment policies and reporting procedures. Board President Carolyn Mitchell emphasized, "The safety and wellbeing of our students is our highest priority. We will ensure our protocols are working as intended."</p>
-                <p>In a dramatic development yesterday, the FBI executed a search warrant at Springfield High School, seizing documents and electronic records related to the case. According to court documents obtained by FOX News, warrant #FD-4587-C was issued by Federal Judge Marcus Thompson on May 3, 2025, citing potential violations of federal civil rights laws and Title IX regulations.</p>
-                <p>Community members have organized a rally in support of the student, scheduled for this weekend. Local parent organization "Parents for Safe Schools" spokesperson Jennifer Adams stated, "This is about standing together as a community to say this behavior will not be tolerated. We need to protect our children."</p>
-                <p>State Senator James Roberts has also weighed in, calling for a review of anti-harassment legislation. "Our laws must have teeth," Roberts said in a statement. "Schools need clear guidance and accountability measures to ensure swift action when students report troubling behavior."</p>
-                <p>Experts note that teen harassment cases often go unreported, with victims frequently fearing retaliation or not being taken seriously. Child psychologist Dr. Sarah Klein explained, "The psychological impact of harassment can be devastating and long-lasting. Schools need comprehensive prevention programs and clear response protocols."</p>
-                <p>The federal lawsuit, filed by the family on May 2, 2025 (Case #25-CV-7821), names the school district, Principal Robert Edwards, and three staff members as defendants. The complaint alleges negligence, failure to provide equal educational opportunities, and deliberate indifference to the teenager's rights. FBI Special Agent in Charge Diana Martinez confirmed that an arrest warrant has been issued for former school counselor William Peterson, who allegedly failed to report the harassment despite multiple complaints.</p>
-                <p>The incident comes amid growing national concern about student safety and the responsibility of educational institutions to provide harassment-free environments.</p>
-                <p>FOX NEWS will continue to follow this developing story.</p>
-            </div>
+      <div class="section-heading">RELATED COVERAGE</div>
 
-            <!-- Image with overlay under the article -->
-            <div class="image-overlay-container">
-                <img src="https://vvrl.cc/mhq7il" alt="Springfield High School building with police vehicles parked outside" class="featured-image" onerror="handleImageError(this)" onload="handleImageLoad(this)" />
-                <div class="image-overlay-text">
-                    FBI RELEASED PHOTO OF THE OFFENDANT IN THE LAWSUIT FILE
-                </div>
-            </div>
+      <div class="related-stories">
+        <h3>MORE ON THIS STORY</h3>
+        <ul>
+          <li>Department of Education Launches Review of Title IX Compliance in Schools</li>
+          <li>Parents' Rights Groups Call for Stronger Protections for Students</li>
+          <li>OPINION: Schools Must Be Held Accountable for Student Safety</li>
+        </ul>
+      </div>
 
-            <div class="section-heading">RELATED COVERAGE</div>
-            
-            <div class="related-stories">
-                <h3>MORE ON THIS STORY</h3>
-                <ul>
-                    <li>Department of Education Launches Review of Title IX Compliance in Schools</li>
-                    <li>Parents' Rights Groups Call for Stronger Protections for Students</li>
-                    <li>OPINION: Schools Must Be Held Accountable for Student Safety</li>
-                </ul>
-            </div>
-    
-    <div class="footer">
+      <div class="footer">
         <p><strong>If you or someone you know is experiencing harassment</strong>, resources are available through the National Sexual Assault Hotline at 1-800-656-HOPE (4673).</p>
-        <p>© 2025 FOX News Network, LLC. All rights reserved. This material may not be published, broadcast, rewritten, or redistributed.</p>
+        <p>© 2025 FOX News Network, LLC. All rights reserved.</p>
+      </div>
     </div>
-    </div>
-</div>
-
-<script>
-    // Debug functions to track image loading
-    function handleImageError(img) {
-        console.error('Image failed to load:', img.src);
-        img.style.border = '2px solid red';
-        img.alt = 'Image failed to load: ' + img.src;
-        updateDebugInfo('Image failed to load: ' + img.src);
-    }
-    
-    function handleImageLoad(img) {
-        console.log('Image loaded successfully:', img.src);
-        img.style.border = '2px solid green';
-        updateDebugInfo('Image loaded: ' + img.src);
-    }
-    
-    function handleVideoError(video) {
-        console.error('Video failed to load:', video.querySelector('source').src);
-        const videoContainer = video.parentElement;
-        if (videoContainer) {
-            videoContainer.innerHTML = '<div style="padding: 20px; background-color: #f3f3f3; border: 1px solid #ddd; text-align: center;"><p>Video loading error: ' + video.querySelector('source').src + '</p></div>';
-        }
-        updateDebugInfo('Video failed to load: ' + video.querySelector('source').src);
-    }
-    
-    function updateDebugInfo(message) {
-        const statusElement = document.getElementById('image-status');
-        if (statusElement) {
-            statusElement.innerHTML += '<br>' + message;
-        }
-    }
-    
-    // Test image URLs on page load
-    document.addEventListener('DOMContentLoaded', function() {
-        console.log('Testing image URLs...');
-        
-        // Test each URL
-        const urls = [
-            'https://vvrl.cc/mhq7il',
-            'https://vvrl.cc/m23p5o', 
-            'https://vvrl.cc/mdz3o0'
-        ];
-        
-        urls.forEach(url => {
-            const img = new Image();
-            img.onload = function() {
-                console.log('URL accessible:', url);
-                updateDebugInfo('URL accessible: ' + url);
-            };
-            img.onerror = function() {
-                console.error('URL not accessible:', url);
-                updateDebugInfo('URL not accessible: ' + url);
-            };
-            img.src = url;
-        });
-    });
-</script>
+  </div>
 </body>
-</html> 
+</html>
